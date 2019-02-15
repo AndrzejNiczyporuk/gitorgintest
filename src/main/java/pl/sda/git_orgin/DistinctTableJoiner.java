@@ -21,12 +21,12 @@ public class DistinctTableJoiner {
 			System.out.println(Arrays.toString(table));
 		}
 		
-		int[] distinctTable = join(tables);
+		int[] distinctTable = JoinTabeles(tables);
 		System.out.println("Wynik: " + Arrays.toString(distinctTable));
 	}
 	
 	
-	private static int[] join(int[][] tables) {
+	private static int[] JoinTabeles(int[][] tables) {
 		Set<Integer> values = new HashSet<>();
 		
 		for (int[] table : tables) {
