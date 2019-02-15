@@ -21,12 +21,25 @@ public class DistinctTableJoiner {
 			System.out.println(Arrays.toString(table));
 		}
 		
-		int[] distinctTable = JoinTabeles(tables);
+		int[] distinctTable = JoinTable(tables);
 		System.out.println("Wynik: " + Arrays.toString(distinctTable));
 	}
 	
 	
-	private static int[] JoinTabeles(int[][] tables) {
+	
+	private static int getInputNumber(String messge) {
+		System.out.println(messge);
+		return SCANNER.nextInt();
+	}
+	
+	private static void fill(int[] table) {
+		Random random = new Random();
+		for (int i = 0; i < table.length; i++) {
+			table[i] = random.nextInt(25);
+		}
+	}
+	
+	private static int[] JoinTable(int[][] tables) {
 		Set<Integer> values = new HashSet<>();
 		
 		for (int[] table : tables) {
@@ -42,19 +55,5 @@ public class DistinctTableJoiner {
 		}
 		return result;
 	}
-	
-	private static int getInputNumber(String messge) {
-		System.out.println(messge);
-		return SCANNER.nextInt();
-	}
-	
-	private static void fill(int[] table) {
-		Random random = new Random();
-		for (int i = 0; i < table.length; i++) {
-			table[i] = random.nextInt(25);
-		}
-	}
-
-	
 	
 }
