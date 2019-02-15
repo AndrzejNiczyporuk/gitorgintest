@@ -35,7 +35,7 @@ public class DistinctTableJoiner {
 	private static void fill(int[] table) {
 		Random random = new Random();
 		for (int i = 0; i < table.length; i++) {
-			table[i] = random.nextInt(25);
+			table[i] = random.nextInt(15);
 		}
 	}
 	
