@@ -4,7 +4,7 @@ import java.util.*;
 
 public class DistinctTableJoiner {
 	
-	public static final Scanner SCANNER = new Scanner(System.in);
+	private static final Scanner SCANNER = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		
@@ -42,10 +42,9 @@ public class DistinctTableJoiner {
 		}
 		int[] result = new int[values.size()];
 		
-		Iterator<Integer> iterator = values.iterator();
 		int counter = 0;
-		while (iterator.hasNext()) {
-			result[counter++] = iterator.next();
+		for (Integer value : values) {
+			result[counter++] = value;
 		}
 		return result;
 	}
